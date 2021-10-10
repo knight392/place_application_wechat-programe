@@ -1,0 +1,7 @@
+<!--components/datetime-picker/datetime-picker.wxml-->
+
+<van-field readonly required="{{required}}" clickable name="beginTimePicker" value="{{time}}" label="{{label}}" placeholder="{{placeholder}}"
+  capture-bind:tap="onOpen" error-message="{{message}}" right-icon="arrow"/>
+<van-popup show="{{showPicker}}" position="bottom">
+  <van-datetime-picker value="" type="{{mode}}" min-date="{{minDate}}" max-date="{{maxDate}}"   title="{{pickerTitle}}" bind:confirm="onConfirm" bind:cancel="onHiden" />
+</van-popup>

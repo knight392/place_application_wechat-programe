@@ -1,0 +1,12 @@
+<!--pages/progress/progress.wxml-->
+<scroll-view scroll-y="">
+  <!-- 总申请进度 -->
+  <view class="title"><text class="place">{{place_name}}</text>申请进度</view>
+  <van-steps active-color="#758bfd" steps="{{ steps }}" active="{{ cur_step }}" />
+
+  <!-- 申请记录 -->
+  <view class="apl-record">
+    <view class="title-record">申请记录</view>
+    <van-steps  steps="{{ records }}" active="0" direction="vertical" active-color="#758bfd" />
+  </view>
+</scroll-view>

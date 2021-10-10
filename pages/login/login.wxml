@@ -1,0 +1,41 @@
+<!--pages/login/login.wxml-->
+<scroll-view scroll-y class="container">
+  <!-- 背景图 -->
+  <view class="bg-image"
+    style=" background: url('/static/images/bg/login-bg.jpg') no-repeat fixed; background-size: cover;"></view>
+  <!-- 头部标题  -->
+  <view class="header text-center padding">
+    <view class="title text-bold margin-top">
+      欢迎登录
+    </view>
+  </view>
+  <!-- 表单 -->
+  <form class="login-form"  >
+    <view style="margin-top:150rpx">
+      <van-cell-group inset>
+        <my-form-element class="element" model:value="{{sno}}" clearable="true"   label="学号"  type="number" icon="user-circle-o" placeholder="请输入学号" rule="{{rules.sno}}" error-message="学号输入有误"></my-form-element>
+        <my-form-element class="element" model:value="{{pass}}" clearable="true" label="密码"  icon="closed-eye" type="password" placeholder="请输入密码" rule="{{rules.pass}}" error-message="密码禁止为空"></my-form-element>  
+      </van-cell-group>
+    </view>
+    <view style="margin-top:50rpx">
+      <van-cell-group inset>
+        <van-button type="primary" data-selectors=".element" bindtap="loginSubmit" color="#758bfd" block>登录</van-button>
+      </van-cell-group>
+    </view>
+  </form>
+  <van-toast id="login-loading" />
+  <van-toast id="login-fail" />
+  <van-toast id="login-fail2" />
+  <view class="margin-top text-center">
+    <text style="text-decoration: underline;">
+      忘记密码?
+    </text>
+  </view>
+  <view class="margin-top text-center text-bold">
+    <text>《服务条款》</text>
+    <text>《隐私权政策》</text>
+  </view>
+  <view class="notice-bar">
+    <van-notice-bar custom-class="notice-bar-inner"  wrapable  text="为了确认您是广金学子，请您使用本校教务系统-智强科技账号密码进行登录，不便之处敬请谅解。" />
+  </view>
+</scroll-view>

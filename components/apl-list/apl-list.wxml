@@ -1,0 +1,13 @@
+<!--components/apl-list/apl-list.wxml-->
+<view class="list">
+  <block wx:for="{{aplList}}" wx:key="item">
+    <apl-card apl-card="{{item}}"></apl-card>
+  </block>
+
+  <!-- 空状态页 -->
+  <van-empty
+  wx:if="{{aplList.length == 0}}"
+  class="custom-image"
+  description="无申请记录"
+/>
+</view>

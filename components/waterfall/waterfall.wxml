@@ -1,0 +1,15 @@
+<!--components/waterfall/waterfall.wxml-->
+<view class="waterfall">
+  <!-- 左列表 -->
+  <view class="leftList innerList" id="leftList">
+    <block wx:for="{{leftData}}" wx:key="item">
+      <place-item place="{{item}}"  style="margin-bottom: {{itemGap}}rpx;" data-place="{{item}}" bindtap="toAplForm"></place-item>
+    </block>
+  </view>
+  <!-- 右列表 -->
+  <view class="rightList innerList" id="rightList">
+    <block wx:for="{{rightData}}"  wx:key="item">
+      <place-item place="{{item}}" style="margin-bottom: {{itemGap}}rpx;" data-place="{{item}}" bindtap="toAplForm"></place-item>
+    </block>
+  </view>
+</view>

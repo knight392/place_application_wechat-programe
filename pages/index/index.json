@@ -1,0 +1,7 @@
+{
+  "usingComponents": { 
+    "van-icon": "@vant/weapp/icon" ,
+    "van-search": "@vant/weapp/search",
+    "waterfall": "/components/waterfall/waterfall"
+  }
+}

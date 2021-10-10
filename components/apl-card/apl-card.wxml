@@ -1,0 +1,33 @@
+<!--components/apl-card/apl-card.wxml-->
+<view class="card">
+  <!-- 头部 -->
+  <view class="header">
+    <!-- 场地名 -->
+    <view class="place-name">{{aplCard.place.place_name}}</view>
+    <!-- 当前状态 -->
+    <view class="status" style="color:{{fontColor}}">{{status}}</view>
+  </view>
+
+  <!-- 正文  -->
+  <view class="center">
+    <!-- 图片 -->
+    <van-image width="40vw" height="18vh" lazy-load radius="8px" src="{{img_path}}"></van-image>
+    <!-- 时间 -->
+    <view class="time-box">
+      <view class="label">活动时间：</view>
+      <view class="inner">
+        <text class="begin-time">{{begin_time}}</text>
+        <text class="icon">至</text>
+        <text class="end-time">{{end_time}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 尾部 -->
+  <view class="footer">
+    <!-- 详情按钮 -->
+    <button class="detail-btn btn" bindtap="toDetail">详情</button>
+    <!-- 进度按钮 -->
+    <button class="progress-btn btn" bindtap="toProgress">进度</button>
+  </view>
+</view>

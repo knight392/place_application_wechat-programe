@@ -1,0 +1,5 @@
+<!--components/place-item/placeItem.wxml-->
+<view class="place-item">
+  <image class="img" src="{{baseURL + place.image.path}}" lazy-load mode="widthFix"></image>
+  <view class="name">{{place.place_name}}</view>
+</view>

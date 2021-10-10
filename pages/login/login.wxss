@@ -1,0 +1,36 @@
+/* pages/login/login.wxss */
+.bg-image{
+  position: fixed;
+  width:100vw;
+  height: 100vh;
+  opacity: 0.65;
+  z-index: 0;
+}
+.header{
+  position: relative;
+  z-index:1;
+}
+.logo{
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+.logo image{
+  width:130rpx;
+  height:130rpx;
+}
+
+.header .title{
+  font-size:43rpx;
+}
+
+.notice-bar{
+  position: fixed;
+  bottom: 0;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.notice-bar-inner{
+  padding-right:40rpx;
+}

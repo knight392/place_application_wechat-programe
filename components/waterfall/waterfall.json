@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "place-item": "../place-item/place-item"
+  }
+}

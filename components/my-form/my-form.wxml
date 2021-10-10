@@ -1,0 +1,4 @@
+<!--components/my-form/my-form.wxml-->
+<form>
+  <slot class="slot"></slot>
+</form>

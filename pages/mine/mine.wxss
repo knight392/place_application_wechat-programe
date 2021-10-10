@@ -1,0 +1,40 @@
+/* pages/mine/mine.wxss */
+.header{
+  background-color: #758bfd;
+}
+
+.user{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:35vw;
+}
+
+.header .cuIcon-comment{
+  float:right;
+}
+.liner-bg{
+  background-image: linear-gradient(#758bfd,#e9ecef);
+}
+.option-box{
+  display: flex;
+  justify-content: space-around;
+}
+
+.cu-item image{
+  display: block;
+ width:48rpx;
+ height:48rpx;
+ margin:10rpx auto;
+}
+
+.all-apply{
+  margin:30rpx auto;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.all-apply .all-link{
+  float:right
+}
+

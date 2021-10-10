@@ -1,0 +1,17 @@
+/* components/waterfall/waterfall.wxss */
+.waterfall{
+  width: 95vw;
+  margin: 20rpx auto;
+  overflow: hidden;
+}
+.innerList{
+  width: 346rpx;
+  display: flex;
+  flex-flow: column wrap;
+}
+.leftList {
+  float: left;
+}
+.rightList{
+  float:right;
+}

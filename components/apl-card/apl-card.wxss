@@ -1,0 +1,73 @@
+/* components/apl-card/apl-card.wxss */
+.card{
+  background-color: #fff;
+  margin:10px auto;
+  box-sizing: border-box;
+  width:90vw;
+  padding:10px;
+  border-radius: 10px;
+}
+/* 头部和中间 */
+.header,.center{
+  display: flex;
+  margin-bottom:10px;
+  justify-content: space-between;
+}
+/* 场地名 */
+.place-name{
+  font-weight: 600;
+}
+/* 状态 */
+.status{
+  color:#758bfd
+}
+
+.time-box .label{
+  margin-bottom: 10px;
+}
+/* 时间盒子 */
+.time-box .inner{
+  position: relative;
+  width:39vw;
+  height: 10vh;
+}
+
+.begin-time{
+  position: absolute;
+  top:0
+}
+.end-time{
+  position: absolute;
+  bottom:0
+}
+
+/* icon 至 */
+.time-box .icon{
+  position: absolute;
+  right:0;
+  top:50%;
+  padding:2px 4px ;
+  transform: translate(0,-50%);
+  border-radius: 4px;
+  background-color: #edf2fb;
+  color:#758bfd;
+  border:1px solid #758bfd;
+}
+
+/* 底部 */
+.footer{
+  overflow: hidden;
+}
+/* 两按钮 */
+.btn{
+  float: right;
+  margin-left:20px;
+  font-size:30rpx;
+  width:123rpx;
+  line-height: 50rpx;
+  background-color: #fff;
+}
+
+
+
+

@@ -1,0 +1,22 @@
+<!--pages/my-apply/my-apply.wxml-->
+
+
+  <van-tabs sticky color="#758bfd" active="{{ active }}" bind:change="onChange">
+
+    <van-tab title="全部">
+      <apl-list apl-list="{{all_data}}"></apl-list>
+    </van-tab>
+    <van-tab title="审批中">
+      <apl-list apl-list="{{ing_data}}"></apl-list>
+    </van-tab>
+    <van-tab title="需补正">
+
+      <apl-list apl-list="{{amend_data}}"></apl-list>
+    </van-tab>
+    <van-tab title="已完成">
+
+      <apl-list apl-list="{{complete_data}}"></apl-list>
+
+    </van-tab>
+
+  </van-tabs>

@@ -1,0 +1,16 @@
+/* pages/progress/progress.wxss */
+.title{
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+}
+
+.apl-record{
+  width: 90vw;
+  margin:20rpx auto 0;
+  padding:15rpx;
+  box-sizing: border-box;
+  border-radius:10px;
+  background-color: #fff;
+  }

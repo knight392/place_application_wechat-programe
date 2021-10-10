@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<scroll-view refresher-enabled scroll-y  class="container">
+    <swiper class="swiper" indicator-dots autoplay circular indicator-active-color="#758bfd">
+      <swiper-item wx:for="{{bannerList}}" wx:key="index">
+        <image class="swipe-img" src="{{baseURL + item.path}}" lazy-load></image>
+      </swiper-item>
+    </swiper>
+    <van-search v-model="value" placeholder="请输入场地名称" />
+    <waterfall is-login="{{isLogin}}" datas="{{placeList}}" ></waterfall>
+</scroll-view>

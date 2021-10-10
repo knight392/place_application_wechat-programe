@@ -1,0 +1,47 @@
+<!--pages/apply-form.wxml-->
+<scroll-view scroll-y class="container">
+  <form catchsubmit="formSubmit">
+    <view class="form-title">{{pro_form_name}}</view>
+
+    <!-- 申请场地 -->
+    <van-field required name="placeName" value="{{place_name}}" label="申请场地" readonly>
+    </van-field>
+
+    <!-- 起始时间 -->
+    <my-datetime-picker class="element" required="true" label="开始时间" pickerTitle="选择开始时间" model:value="{{begin_time}}"
+      error-message="{{MSG_ERR.begin_time}}" rule="{{rules.beginTime}}">
+    </my-datetime-picker>
+    <!-- 结束时间 -->
+    <my-datetime-picker class="element" required="true" label="结束时间" pickerTitle="选择结束时间" model:value="{{end_time}}"
+    min-date="{{min_endTime}}"
+      capture-bind:tap="selectEndTime" error-message="{{MSG_ERR.end_time}}" time="{{end_time_show}}"
+      avaliable="{{endTime_avaliable}}"
+      rule="{{rules.endTime}}">
+    </my-datetime-picker>
+
+    <!-- 申请目的 -->
+    <my-form-element required="true" class="element" model:value="{{purpose}}" label="场地用途" type="textarea"
+      maxlength="50" placeholder="请输入场地用途 (50字内)" error-message="{{MSG_ERR.purpose}}" rule="{{rules.purpose}}">
+    </my-form-element>
+
+    <!-- 申请组织 -->
+    <my-form-element required="true" class="element" model:value="{{org_name}}" label="申请组织" placeholder="请输入组织名称"
+      error-message="{{MSG_ERR.org}}" rule="{{rules.org}}"></my-form-element>
+
+    <!-- 指导老师 -->
+    <my-form-element required="true" class="element" model:value="{{tutor_name}}" label="指导老师" placeholder="请输入指导老师姓名"
+      error-message="{{MSG_ERR.tutor}}" rule="{{rules.tutor}}"></my-form-element>
+
+    <!-- 联系电话 -->
+    <my-form-element required="true" class="element" model:value="{{s_phone}}" label="联系电话" placeholder="请输入联系电话"
+      error-message="{{MSG_ERR.phone_reg}}" rule="{{rules.phone}}"></my-form-element>
+
+    <!-- 申请人 -->
+    <van-field required name="s_name" value="{{s_name}}" label="申请人" readonly>
+    </van-field>
+    <van-toast id="van-toast" />
+    <van-toast id="loading" />
+    <!-- 提交按钮  -->
+    <button style="margin: 30rpx auto; width:50vw; background-color: #6d77f6;" type="primary" data-selectors=".element"    bindtap="formSubmit">提交</button>
+  </form>
+</scroll-view>

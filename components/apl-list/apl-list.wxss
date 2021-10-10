@@ -1,0 +1,6 @@
+/* components/apl-list/apl-list.wxss */
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

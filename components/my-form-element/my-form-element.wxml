@@ -1,0 +1,2 @@
+<!--components/my-form-element/my-form-element.wxml-->
+<van-field  required="{{required}}" clearable="{{clearable}}" label="{{label}}" model:value="{{value}}" type="{{type}}" icon="{{icon}}" placeholder="{{placeholder}}"  error-message="{{message}}" bindblur="validate" />

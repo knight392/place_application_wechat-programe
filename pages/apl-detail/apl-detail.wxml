@@ -1,0 +1,31 @@
+<!--pages/apl-detail/apl-detail.wxml-->
+<van-cell-group title="申请人">
+  <van-field label="学号" readonly value="{{apl.student.s_no}}"></van-field>
+  <van-field label="姓名" readonly value="{{apl.student.s_name}}"></van-field>
+  <van-field label="学院" readonly value="{{apl.student.s_dwmc}}"></van-field>
+</van-cell-group>
+
+<van-cell-group title="申请内容">
+  <van-field label="场地名" readonly value="{{apl.place.place_name}}"></van-field>
+  <van-field label="开始时间" readonly value="{{begin_time}}"></van-field>
+  <van-field label="结束时间" readonly value="{{end_time}}"></van-field>
+  <van-field label="申请目的" readonly value="{{apl.purpose}}"></van-field>
+  <van-field label="申请组织" readonly value="{{apl.org_name}}"></van-field>
+  <van-field label="联系电话" readonly value="{{apl.s_phone}}"></van-field>
+</van-cell-group>
+
+<van-cell-group title="申请状态">
+  <van-field label="申请状态" readonly value="{{status}}" right-icon="arrow"></van-field>
+  <van-field wx:if="{{status == '需补正'}}" label="打回原因" readonly value="{{apl.refuse_reason}}"></van-field>
+  <van-field wx:if="{{status == '审批拒绝'}}" label="拒绝原因" readonly value="{{apl.refuse_reason}}"></van-field>
+
+</van-cell-group>
+
+
+<!-- 补正 | 生成凭条按钮  -->
+<!-- 提交按钮  -->
+<button wx:if="{{status == '需补正'}}" style="margin: 30rpx auto; width:50vw; background-color: #6d77f6;  font-size: 14px;" type="primary" bindtap="rewriteApplication">点击补正</button>
+
+<button wx:if="{{status == '审批通过'}}" style="margin: 30rpx auto; width:50vw; background-color: #6d77f6;  font-size: 14px;" type="primary" >生成凭条</button>
+
+

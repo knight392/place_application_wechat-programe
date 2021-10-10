@@ -1,0 +1,32 @@
+<!--pages/stu-detail/stu-detail.wxml-->
+<view>
+  <!-- 头像 -->
+  <view class="profile">
+    <!-- 头像展示 -->
+    <van-image round fit="cover" width="4rem" height="4rem" src="{{s_avatar}}" />
+    <!-- 点击更新按钮 -->
+    <view class="updateBtn" bindtap="getUserProfile">
+      <text>更新头像</text>
+      <van-icon name="arrow" />
+    </view>
+  </view>
+
+<view style="margin-top:30rpx">
+  <van-cell-group class="info-group" >
+    <!-- 学号 -->
+    <van-field readonly label="学号" value="{{s_no}}">
+    </van-field>
+
+    <!-- 姓名 -->
+    <van-field readonly label="姓名" value="{{s_name}}">
+    </van-field>
+
+    <!-- 学院 -->
+    <van-field readonly label="学院" value="{{s_dwmc}}">
+    </van-field>
+  </van-cell-group>
+</view>
+  
+
+  <van-button class="logout-btn" custom-style="color:#f00; margin-top:30rpx" block bindtap="logout">退出登录</van-button>
+</view>
