@@ -4,7 +4,7 @@
     "van-button": "@vant/weapp/button",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-notice-bar": "@vant/weapp/notice-bar/index",
-    "my-form-element": "/components/my-form-element/my-form-element",
+    "my-form-element": "/components/my-form/my-input",
     "van-toast": "@vant/weapp/toast/index"
   },
   "navigationBarTitleText":"登录"

@@ -1,12 +1,21 @@
 // components/my-form-element/my-form-element.js
+import formBehavior from './form-behavior.js'
+
 Component({
 
   /**
    * 组件的属性列表
    */
-  './my-form': {
-    type: 'ancestor', // 关联的目标节点应为子孙节点
+  behaviors: [
+    formBehavior
+  ],
+
+  relations: {
+    './my-form': {
+      type: 'parent'
+    }
   },
+  
   properties: {
     value: {
       type:String,
@@ -28,10 +37,7 @@ Component({
       type: String,
       value:''
     },
-    rule: {
-      type:Object,
-      value: null
-    },
+  
     clearable: {
       type:Boolean,
       value: false
@@ -57,23 +63,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    // 有效性验证函数
-    validate() {
-      if( this.properties.rule == null || this.properties.rule.validator == null ){
-        return
-      }
-      const res = this.properties.rule.validator(this.properties.value)
-     
-      if(!res){
-        this.setData({
-          message: this.properties.errorMessage
-        })
-      }else{
-        this.setData({
-          message: ''
-        })
-      }
-      return res
-    }
+  
   }
 })

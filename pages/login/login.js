@@ -170,5 +170,4 @@ Page({
     }
     console.log(this.data.sno, this.data.pass)
   }
-
 })

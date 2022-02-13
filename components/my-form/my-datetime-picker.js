@@ -1,5 +1,6 @@
 // components/datetime-picker/datetime-picker.js
 // 当前时间
+import formBehavior from './form-behavior.js'
 
 const app = getApp()
 const curDatetime = new Date();
@@ -8,6 +9,16 @@ Component({
   options: {
     styleIsolation: 'shared',
   },
+
+  relations: {
+    './my-form': {
+      type: 'parent'
+    }
+  },
+  behaviors: [
+    formBehavior
+  ],
+
   /**
    * 组件的属性列表
    */
@@ -54,10 +65,6 @@ Component({
     value: {
       type: Number,
       value:0
-    },
-    rule: {
-      type: Object,
-      value:null
     }
   },
 
@@ -130,25 +137,6 @@ Component({
       this.setData({
         showPicker: false
       })
-    },
-
-      // 有效性验证函数
-      validate() {
-        if( this.properties.rule == null || this.properties.rule.validator == null ){
-          return
-        }
-        const res = this.properties.rule.validator(this.properties.value)
-       
-        if(!res){
-          this.setData({
-            message: this.properties.errorMessage
-          })
-        }else{
-          this.setData({
-            message: ''
-          })
-        }
-        return res
-      }
+    }
   }
 })

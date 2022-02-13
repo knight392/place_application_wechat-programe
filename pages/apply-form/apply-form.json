@@ -1,8 +1,9 @@
 {"usingComponents": {
-    "my-datetime-picker": "/components/my-datetime-picker/my-datetime-picker",
+    "my-datetime-picker": "/components/my-form/my-datetime-picker",
     "van-field": "@vant/weapp/field",
     "van-button": "@vant/weapp/button",
-    "my-form-element": "/components/my-form-element/my-form-element",
+    "my-form": "/components/my-form/my-form",
+    "my-form-element": "/components/my-form/my-input",
     "van-toast": "@vant/weapp/toast/index"
   }
 }

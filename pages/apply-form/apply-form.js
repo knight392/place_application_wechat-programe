@@ -62,7 +62,7 @@ const MSG_ERR = {
   phone: '联系电话必填',
   phone_reg: '电话号码格式有误'
 }
-import validate from './../../utils/form-validate'
+
 import Toast from './../../miniprogram_npm/@vant/weapp/toast/toast'
 import {
   submit
@@ -254,16 +254,14 @@ Page({
     }
   },
 
-  // 表单验证
-  validate,
+
 
   /**
    * 表单提交
    */
   formSubmit(e) {
-    const selectors = e.currentTarget.dataset.selectors
-    // console.log(selectors)
-    if (this.validate(selectors)) {
+    console.log(e.currentTarget.dataset.formId)
+    if (this.selectComponent(e.currentTarget.dataset.formId).validate()) {
       Toast.loading({
         message:'提交中',
         duration: 0
